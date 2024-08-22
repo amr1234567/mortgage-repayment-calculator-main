@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap"
+    rel="stylesheet">
+  <title>Frontend Mentor | Mortgage repayment calculator</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div class="main">
+    <div class="form">
+      <header>
+        <h3>Mortgage Calculator</h3>
+        <button onclick="clearForm()">Clear All</button>
+      </header>
+      <form onsubmit="form.onSubmit(event)">
+        <div class="amount-input">
+          <label for="amount">Mortgage Amount</label>
+          <div class="input-with-pre-icon input-container" data-id="amount">
+            <div class="icon">$</div>
+            <input type="text" id="amount" name="amount" placeholder="amount">
+          </div>
+        </div>
+        <div class="date-and-rate">
+          <div class="date-input">
+            <label for="date">Mortgage Term</label>
+            <div class="input-with-late-icon input-container" data-id="date">
+              <input type="text" id="date" name="date" placeholder="term">
+              <div class="icon">years</div>
+            </div>
+          </div>
+          <div class="rate-input">
+            <label for="rate">Interest Rate</label>
+            <div class="input-with-late-icon input-container" data-id="rate">
+              <input type="text" id="rate" name="rate" placeholder="rate">
+              <div class="icon">%</div>
+            </div>
+          </div>
+        </div>
+        <div class="type-of-payment">
+          <label for="">Mortgage Type</label>
+          <div>
+            <div class="type-option" data-id="Repayment">
+              <input type="radio" name="type" value="Repayment" id="Repayment">
+              <label for="Repayment">Repayment</label>
+            </div>
+            <div class="type-option" data-id="Interest-Only">
+              <input type="radio" name="type" value="Interest-Only" id="Interest-Only">
+              <label for="Interest-Only">Interest Only</label>
+            </div>
+          </div>
+        </div>
+        <div class="button-calculate">
+          <div class="button-icon">
+            <img src="/assets/images/icon-calculator.svg" alt="">
+          </div>
+          <button type="submit">Calculate Repayments</button>
+        </div>
+      </form>
+    </div>
+    <div class="result-section">
+      <div class="normal-view">
+        <img src="/assets/images/illustration-empty.svg" alt="illustration-empty">
+        <h3>Results shown here</h3>
+        <p>Complete the form and click “calculate repayments” to see what
+          your monthly repayments would be.</p>
+      </div>
+
+    </div>
+  </div>
+
+
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>.
+    Coded by <a href="#">Your Name Here</a>.
+  </div>
+  <script src="script.js"></script>
+</body>
+
+</html>

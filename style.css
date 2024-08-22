@@ -1,0 +1,392 @@
+:root {
+   /* Primary */
+
+   --Lime: hsl(61, 70%, 52%);
+   --Red: hsl(4, 69%, 50%);
+
+   /*Neutral*/
+
+   --White: hsl(0, 0%, 100%);
+   --Slate-100: hsl(202, 86%, 94%);
+   --Slate-300: hsl(203, 41%, 72%);
+   --Slate-500: hsl(200, 26%, 54%);
+   --Slate-700: hsl(200, 24%, 40%);
+   --Slate-900: hsl(202, 55%, 16%);
+   --input-border-radius: 0.2rem;
+}
+
+* {
+   font-family: "Plus Jakarta Sans", sans-serif;
+}
+
+body {
+   background-color: var(--Slate-100);
+}
+
+.attribution {
+   font-size: 11px;
+   text-align: center;
+}
+
+.attribution a {
+   color: hsl(228, 45%, 44%);
+}
+
+.main {
+   width: 60%;
+   margin: 5rem auto;
+   box-shadow: 1px 1px 14px 2px #d2d2d2;
+   border-radius: 1rem;
+   display: flex;
+   justify-content: space-between;
+   background-color: var(--White);
+}
+
+.form {
+   padding: 2rem;
+   width: 50%;
+   height: 70vh;
+   display: flex;
+   flex-direction: column;
+   gap: 1rem;
+}
+
+
+
+.form>header {
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+}
+
+.form>header>button {
+   outline: none;
+   border: none;
+   background-color: transparent;
+   cursor: pointer;
+   text-decoration: underline;
+}
+
+.result-section {
+   width: 50%;
+   padding: 2rem;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   background-color: var(--Slate-900);
+   color: var(--White);
+   border-radius: 1rem 1rem 1rem 6rem;
+}
+
+.normal-view {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+}
+
+.normal-view>img {
+   width: 70%;
+}
+
+.normal-view>p {
+   text-align: center;
+   font-weight: 300;
+   color: var(--Slate-300);
+}
+
+/* form */
+
+label {
+   color: var(--Slate-700);
+   font-size: 13px;
+}
+
+.amount-input,
+.date-input,
+.rate-input {
+   display: flex;
+   flex-direction: column;
+   gap: 0.5rem;
+   margin-bottom: 1rem;
+}
+
+.input-with-pre-icon {
+   display: flex;
+   align-items: center;
+   gap: 0;
+   border: 1px solid var(--Slate-500);
+   border-radius: var(--input-border-radius);
+}
+
+.input-with-pre-icon>input {
+   border: none;
+   outline: none;
+   padding-left: 1rem;
+   width: 100%;
+}
+
+.icon {
+   padding: 0.6rem 0.9rem;
+   background-color: var(--Slate-100);
+   border-radius: var(--input-border-radius);
+}
+
+.input-with-late-icon {
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+   gap: 0;
+   border: 1px solid var(--Slate-500);
+   border-radius: var(--input-border-radius);
+}
+
+.input-with-late-icon>input {
+   border: none;
+   outline: none;
+   padding-left: 1rem;
+   width: 90%;
+}
+
+.date-and-rate {
+   display: flex;
+   gap: 2rem;
+}
+
+.date-and-rate>div {
+   width: 50%;
+}
+
+.rate-input {
+   transition: 0.15s ease-in-out;
+}
+
+.input-container-focus {
+   transition: 0.15s ease-in-out;
+   border: 1px solid var(--Lime);
+}
+
+
+.input-container-focus .icon {
+   transition: 0.15s ease-in-out;
+   background-color: var(--Lime);
+}
+
+.input-container-error {
+   transition: 0.15s ease-in-out;
+   border: 1px solid var(--Red);
+}
+
+.input-container-error .icon {
+   transition: 0.15s ease-in-out;
+   background-color: var(--Red);
+}
+
+.type-option {
+   display: flex;
+   align-items: center;
+   gap: 1rem;
+   width: 100%;
+   height: 2rem;
+   padding: 0.5rem 0.7rem;
+   border: 1px solid var(--Slate-500);
+   border-radius: 0.5rem;
+}
+
+.type-option-selected {
+   display: flex;
+   align-items: center;
+   gap: 1rem;
+   width: 100%;
+   height: 2rem;
+   background-color: hwb(61 18% 15% / 0.126);
+   padding: 0.5rem 0.7rem;
+   border: 1px solid var(--Lime);
+   border-radius: 0.5rem;
+}
+
+.type-option>input,
+.type-option-selected>input {
+   transform: scale(1.9);
+   transition: 0.15s ease-in-out;
+   color: var(--Lime);
+   cursor: pointer;
+}
+
+.type-option:hover,
+.type-option-selected:hover {
+   border: 1px solid var(--Lime);
+   cursor: pointer;
+}
+
+.type-option>label,
+.type-option-selected>label {
+   font-weight: 700;
+   font-size: 1rem;
+   cursor: pointer;
+}
+
+.type-of-payment {
+   display: flex;
+   flex-direction: column;
+   gap: 1rem;
+   margin-bottom: 2rem;
+}
+
+.type-of-payment>div {
+   display: flex;
+   flex-direction: column;
+   gap: 0.5rem;
+}
+
+.button-calculate {
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   gap: 0.5rem;
+   background-color: var(--Lime);
+   color: var(--White);
+   border: none;
+   border-radius: 2rem;
+   cursor: pointer;
+   padding: 0.7rem 3rem;
+   width: fit-content;
+   transition: 0.2 ease-in-out;
+}
+
+.button-calculate:hover {
+   opacity: 0.7;
+   cursor: pointer;
+}
+
+.button-calculate>button {
+   border: none;
+   outline: none;
+   background-color: transparent;
+   font-weight: 700;
+   font-size: 1rem;
+}
+
+.results {
+   display: flex;
+   flex-direction: column;
+   height: 100%;
+   width: 100%;
+}
+
+.results>header>p {
+   color: var(--Slate-300);
+   font-size: 13px;
+   letter-spacing: 0.05rem;
+}
+
+.result-content {
+   position: relative;
+   background-color: hsl(199, 68%, 11%) !important;
+   border-radius: 0.6rem;
+   padding: 2rem;
+   display: flex;
+   flex-direction: column;
+   gap: 1rem;
+   z-index: 3;
+}
+
+.overflow {
+   position: absolute;
+   top: -3px;
+   left: 2px;
+   width: 99%;
+   height: 0.5rem;
+   background-color: var(--Lime);
+   z-index: 1;
+   border-radius: 0.6rem 0.6rem 0px 0px;
+}
+
+.inserts-parts {
+   z-index: 5;
+   width: 100%;
+   height: 100%;
+   background-color: inherit;
+}
+
+.result-with-overflow {
+   position: relative;
+   box-sizing: border-box;
+   padding: 0%;
+   margin-top: 2rem;
+}
+
+.inserts-per-amount-part {
+   display: flex;
+   flex-direction: column;
+   gap: 0.7rem;
+}
+
+.result-content .header {
+   color: var(--Slate-300);
+   font-size: 13px;
+   margin: 0;
+}
+
+.inserts-per-amount-part>.result-amount {
+   color: var(--Lime);
+   font-size: 2.5rem;
+   font-weight: 900;
+   margin: 0;
+}
+
+.result-separator {
+   width: 100%;
+   height: 0.07rem;
+   background-color: var(--Slate-700);
+   margin: 1.5rem 0;
+}
+
+.total-inserts>.result-amount {
+   color: var(--Slate-100);
+   font-size: 1.5rem;
+   font-weight: 700;
+   margin: 1rem 0;
+}
+
+.error {
+   color: red;
+   margin: 0;
+   font-size: 0.7rem;
+}
+
+@media (max-width: 1200px) {
+   .main {
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 1rem;
+   }
+
+   .form {
+      width: 100%;
+      height: fit-content;
+   }
+
+   .date-and-rate {
+      flex-direction: column;
+      gap: 0.5rem;
+   }
+
+   .date-and-rate>div {
+      width: 100%;
+   }
+
+   .type-option {
+      padding: 0.3rem 0.7rem;
+      width: 95%;
+   }
+
+   .button-calculate {
+      margin: 1rem auto;
+   }
+
+   .result-section {
+      width: 92%;
+      border-radius: 0;
+   }
+}
